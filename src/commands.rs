@@ -277,6 +277,11 @@ pub enum OfflineWalletSubCommand {
     Transactions,
     /// Returns the current wallet balance.
     Balance,
+    /// Resolves the given DNS payment instructions
+    ResolveDnsRecipient {
+        /// Human Readable Name to resolve
+        hrn: String
+    },
     /// Creates a new unsigned transaction.
     CreateTx {
         /// Adds a recipient to the transaction.
